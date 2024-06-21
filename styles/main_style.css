@@ -1,0 +1,98 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url("https://wallpaperaccess.com/full/831489.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(30, 30, 30, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+header .logo {
+    color: #ff0000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px 15px;
+    border: 1px solid rgb(255,255,255, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+header nav a:hover {
+    transform: translateY(-5px);
+    border: 1px solid rgb(255,255,255, 1);
+}
+
+main {
+    padding: 10px;
+}
+
+main h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+main p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.video-item {
+    width: 200px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.video-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.video-item p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+}
+
+.video-item:hover img {
+    transform: scale(1.05);
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 70%;
+    height: 500px;
+}

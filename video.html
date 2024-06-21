@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doramovies</title>
+    <link rel="stylesheet" href="styles/main_style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">DORAMOVIES</div>
+        <nav>
+            <a href="index.html">Regresar</a>
+            <a href="index.html">Doramas</a>
+            <a href="#">Películas</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe id="video-frame" src="" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Obtener el parámetro de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoUrl = urlParams.get('url');
+        document.getElementById('video-frame').src = videoUrl;
+
+        // Cambiar el video al hacer clic en una opción
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.getElementById('video-frame').src = option.getAttribute('data-url');
+            });
+        });
+    </script>
+</body>
+</html>
